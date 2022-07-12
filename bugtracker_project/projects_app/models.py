@@ -5,6 +5,8 @@ class Project(models.Model):
     name = models.CharField(max_length=50)
     organization_name = models.CharField(max_length=70)
     technology = models.CharField(max_length=50)
+    team_name = models.CharField(max_length=50)
+    bugs_count = models.IntegerField()
 
     def __str__(self):
         return self.name

@@ -9,7 +9,9 @@ def home(request):
 
     paginator = Paginator(project_list,2)
     try:
-        project_list = paginator.page(page)
+        # project_list = paginator.page(page)
+        project_list = Project.objects.all()
+
     except PageNotAnInteger:
         project_list = paginator.page(1)
     except EmptyPage:
